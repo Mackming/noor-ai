@@ -2,3 +2,7 @@ streamlit
 firebase-admin
 google-generativeai
 reportlab
+google-auth
+pytz
+google-api-python-clien
+requests

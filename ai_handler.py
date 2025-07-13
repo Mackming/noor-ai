@@ -1,7 +1,26 @@
 import google.generativeai as genai
-from utils.api_keys import GEMINI_KEYS
 import time
 import random
+import streamlit as st
+
+GEMINI_KEYS = [
+    {
+        "key": st.secrets["gpt_keys"]["key1"],
+        "models": ["gemini-2.5-flash-lite-preview-06-17", "gemini-2.0-flash-lite", "gemini-2.0-flash"]
+    },
+    {
+        "key": st.secrets["gpt_keys"]["key2"],
+        "models": ["gemini-2.5-flash-lite-preview-06-17", "gemini-2.0-flash-lite", "gemini-2.0-flash"]
+    },
+    {
+        "key": st.secrets["gpt_keys"]["key3"],
+        "models": ["gemini-2.5-flash-lite-preview-06-17", "gemini-2.0-flash-lite", "gemini-2.0-flash"]
+    },
+    {
+        "key": st.secrets["gpt_keys"]["key4"],
+        "models": ["gemini-2.5-flash-lite-preview-06-17", "gemini-2.0-flash-lite", "gemini-2.0-flash"]
+    }
+]
 
 def generate_advice(prompt):
     for key_entry in GEMINI_KEYS:
