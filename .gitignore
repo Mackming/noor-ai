@@ -1,0 +1,25 @@
+# 🔐 Ignore secret files and folders
+secrets/
+secret_store/
+utils/api_keys.py
+.streamlit/secrets.toml
+firebase_key.json
+firebase_config.json
+.env
+*.env
+
+# ⚙️ Python cache
+__pycache__/
+*.pyc
+
+# 🧪 Virtual environments
+venv/
+env/
+
+# 📝 Logs and miscellaneous
+*.log
+*.pdf
+
+# 🛠️ IDEs
+.vscode/
+.idea/
