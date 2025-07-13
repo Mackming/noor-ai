@@ -4,5 +4,5 @@ google-generativeai
 reportlab
 google-auth
 pytz
-google-api-python-clien
+google-api-python-client
 requests
