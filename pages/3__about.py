@@ -452,7 +452,7 @@ timeline = [
     {"date": "Jan 2025", "title": "The Spark", "content": "After witnessing addiction struggles in our community, we envisioned a tech solution that could provide anonymous support."},
     {"date": "Feb 2025", "title": "First Prototype", "content": "Built initial diagnosis tool using Streamlit and basic AI models."},
     {"date": "Apr 2025", "title": "Community Feature", "content": "Added anonymous story sharing to create peer support network."},
-    {"date": "June 2025", "title": "Islamic Guidance", "content": "Integrated culturally sensitive religious support for Pakistani users."},
+    {"date": "June 2025", "title": "Cultural Guidance", "content": "Integrated culturally sensitive support for Pakistani users."},
     {"date": "Present", "title": "Smart Rehabilitation AI", "content": "Launched full platform with professional UI/UX to help thousands begin their recovery journey."}
 ]
 # Display timeline
