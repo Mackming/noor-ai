@@ -11,7 +11,7 @@ from utils.loading_screen import show_fullscreen_loader
 
 show_fullscreen_loader()
 st.set_page_config(
-    page_title="About Noor AI | The Team Behind Your Recovery",
+    page_title="About Smart Rehabilitation AI | The Team Behind Your Recovery",
     layout="centered"
 )
 
@@ -288,7 +288,7 @@ st.markdown(f"""
 <div class="mission-section">
     <h1 style="font-size: 2.8rem; margin-bottom: 1rem; color: {PRIMARY_COLOR};">🔥 Rise from the Ashes</h1>
     <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto; color: #555;">
-        Noor AI is Pakistan's first AI-powered platform built to help people overcome addiction
+        Smart Rehabilitation AI is Pakistan's first AI-powered platform built to help people overcome addiction
         through culturally sensitive, personalized recovery plans — completely anonymously.
     </p>
 </div>
@@ -453,7 +453,7 @@ timeline = [
     {"date": "Feb 2025", "title": "First Prototype", "content": "Built initial diagnosis tool using Streamlit and basic AI models."},
     {"date": "Apr 2025", "title": "Community Feature", "content": "Added anonymous story sharing to create peer support network."},
     {"date": "June 2025", "title": "Islamic Guidance", "content": "Integrated culturally sensitive religious support for Pakistani users."},
-    {"date": "Present", "title": "Noor AI", "content": "Launched full platform with professional UI/UX to help thousands begin their recovery journey."}
+    {"date": "Present", "title": "Smart Rehabilitation AI", "content": "Launched full platform with professional UI/UX to help thousands begin their recovery journey."}
 ]
 # Display timeline
 st.markdown('<div class="timeline-container">', unsafe_allow_html=True)
@@ -522,7 +522,7 @@ st.markdown(f"""
             border-left: 5px solid {SECONDARY_COLOR}; border: 1px solid #e9ecef;">
     <h3 style="color: {SECONDARY_COLOR};">Your Journey Matters</h3>
     <p style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto; color: #555;">
-        We built Noor AI because we believe everyone deserves a chance at recovery. 
+        We built Smart Rehabilitation AI because we believe everyone deserves a chance at recovery. 
         Whether you're taking your first step or continuing your journey, we're honored 
         to walk this path with you.
     </p>
@@ -543,7 +543,7 @@ def footer_section():
         st.markdown(f"""
         
         <p style="text-align: center; margin-top: 2.5rem; font-size: 1.1rem; color: #555; max-width: 600px; margin-left: auto; margin-right: auto;">
-            We value your feedback and are committed to continuously improving Noor AI. 
+            We value your feedback and are committed to continuously improving Smart Rehabilitation AI. 
             Reach out to us directly with suggestions, questions, or just to share your journey.
         </p>
         """, unsafe_allow_html=True)
