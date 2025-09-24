@@ -196,7 +196,7 @@ st.markdown(inject_loader_script(), unsafe_allow_html=True)
 # =============================
 # 🧠 DIAGNOSIS HEADER (White Theme)
 # =============================
-if st.session_state.step < 10:  # 👈 NOW SAFE TO ACCESS
+if st.session_state.step < 9:  # 👈 CHANGED FROM 10 TO 9 (removed one question)
     st.markdown(f"""
     <div style="text-align: center; margin-bottom: 1rem;">
         <h1 style="font-size: 2.8rem; margin-bottom: 0.5rem; color: {PRIMARY_COLOR};">✨ Your Recovery Journey Starts Here</h1>
@@ -223,7 +223,7 @@ translations = {
         "started": "How did your addiction start?",
         "struggles": "What happens when you try to quit?",
         "relapse": "How often do you relapse?",
-        "religious_mode": "Include Islamic Guidance?",
+        # REMOVED: "religious_mode": "Include Islamic Guidance?",
         "submit": "Generate My Recovery Plan",
         "back": "← Back",
         "next": "Next →",
@@ -245,7 +245,7 @@ translations = {
         "started": "لت کیسے شروع ہوئی؟",
         "struggles": "چھوڑنے کی کوشش پر کیا ہوتا ہے؟",
         "relapse": "کتنی بار دوبارہ رجوع کرتے ہیں؟",
-        "religious_mode": "اسلامی رہنمائی شامل کریں؟",
+        # REMOVED: "religious_mode": "اسلامی رہنمائی شامل کریں؟",
         "submit": "میری بحالی کا منصوبہ حاصل کریں",
         "back": "← پچھلا",
         "next": "اگلا →",
@@ -376,7 +376,7 @@ relapse_options = {
     ]
 }
 
-# 3️⃣ Define questions using dynamic bilingual options
+# 3️⃣ Define questions - REMOVED THE ISLAMIC GUIDANCE QUESTION
 questions = [
     {"key": "age", "type": "selectbox", "options": [str(i) for i in range(12, 60)]},
     {"key": "gender", "type": "selectbox", "options": gender_options[lang]},
@@ -386,16 +386,15 @@ questions = [
     {"key": "started", "type": "multiselect", "options": started_options[lang]},
     {"key": "struggles", "type": "multiselect", "options": struggles_options[lang]},
     {"key": "relapse", "type": "selectbox", "options": relapse_options[lang]},
-    {"key": "religious_mode", "type": "selectbox", "options": ["On", "Off"]},
+    # REMOVED: Islamic guidance question
 ]
 
 # =============================
 # 📊 PROGRESS BAR (White Theme)
 # =============================
-# Fixed total steps (language step + 9 questions)
-if st.session_state.step < 10:  # 👈 NOW SAFE TO ACCESS
-    # Fixed total steps (language step + 9 questions)
-    total_steps = 10
+# Fixed total steps (language step + 8 questions now)
+if st.session_state.step < 9:  # 👈 CHANGED FROM 10 TO 9 (removed one question)
+    total_steps = 9  # 👈 CHANGED FROM 10 TO 9
     current_step = st.session_state.step
     progress_percent = (current_step / total_steps) * 100
 
@@ -453,6 +452,10 @@ if current < len(questions):
 # =============================
 # 🎯 RESULTS SECTION (White Theme)
 # =============================
+# SET ISLAMIC GUIDANCE TO "Off" BY DEFAULT
+if "religious_mode" not in st.session_state.answers:
+    st.session_state.answers["religious_mode"] = "Off"  # 👈 ADDED THIS LINE
+
 st.markdown(f"""
 <div class="result-card">
     <h2 style="color: {PRIMARY_COLOR}; margin-bottom: 1rem;">🌟 Your Personalized Recovery Plan</h2>
