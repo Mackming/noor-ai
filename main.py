@@ -7,7 +7,7 @@ from utils.loading_screen import show_fullscreen_loader
 # =============================
 # ✨ BRAND CONSTANTS & SETTINGS
 # =============================
-APP_NAME = "Noor AI"
+APP_NAME = "Smart Rehabilitation AI"
 PRIMARY_COLOR = "#6C63FF"  # Purple for wisdom
 SECONDARY_COLOR = "#35D0BA"  # Teal for renewal
 LIGHT_BG = "#FFFFFF"  # Pure white background
@@ -263,7 +263,7 @@ col1, col2, col3, col4 = st.columns([1, 1, 1, 1], gap="medium")
 features = [
     {"icon": "🧠", "title": "Self-Assessment", "desc": "Personalized recovery plan based on your situation", "page": "pages/01_diagnose.py"},
     {"icon": "🤝", "title": "Community Stories", "desc": "Read and share anonymous journeys", "page": "pages/2__community.py"},
-    {"icon": "ℹ️", "title": "About Noor AI", "desc": "Our mission and the team behind", "page": "pages/3__about.py"},
+    {"icon": "ℹ️", "title": "About Smart Rehab AI", "desc": "Our mission and the team behind", "page": "pages/3__about.py"},
     {"icon": "🔒", "title": "Admin Portal", "desc": "Content moderation dashboard", "page": "pages/99__admin.py"}
 ]
 
