@@ -637,7 +637,7 @@ def render_sidebar():
             <div style="display: flex; flex-direction: column; align-items: center;">
                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem;">
                     <div style="font-size: 1.5rem; color: white;">✨</div>  <!-- Ensured white color -->
-                    <span style="font-size: 1.3rem; font-weight: 700; color: white;">Noor AI</span>  <!-- White text -->
+                    <span style="font-size: 1.3rem; font-weight: 700; color: white;">Smart Rehabilitation AI</span>  <!-- White text -->
                 </div>
                 <p style="color: white; font-size: 0.8rem; text-align: center; margin: 0; opacity: 0.9;">  <!-- White text -->
                     Your Path to Recovery
