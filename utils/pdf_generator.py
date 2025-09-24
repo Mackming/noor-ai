@@ -133,7 +133,7 @@ def generate_pdf(text, name="Recovery Plan", language="English"):
     
     # Header with title
     header = Table([
-        [Paragraph("<b>NoorAI</b> Recovery Program", styles['Heading3'])],
+        [Paragraph("<b>Smart Rehabilitation AI</b> Recovery Program", styles['Heading3'])],
         [Paragraph(f"Confidential Document • Generated on: {today}", styles['BodyText'])]
     ], colWidths=[doc.width])
     
@@ -187,7 +187,7 @@ def generate_pdf(text, name="Recovery Plan", language="English"):
     # Footer
     footer = Table([
         [Paragraph("Confidentiality Notice: This document contains sensitive personal information. Do not share without consent.", styles['Italic'])],
-        [Paragraph("© 2025 NoorAI Recovery Program. All rights reserved.", styles['BodyText'])]
+        [Paragraph("© 2025 Smart Rehabilitation AI Recovery Program. All rights reserved.", styles['BodyText'])]
     ], colWidths=[doc.width])
     
     footer.setStyle(TableStyle([
