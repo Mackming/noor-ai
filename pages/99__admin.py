@@ -15,7 +15,7 @@ from utils.loading_screen import show_fullscreen_loader
 
 show_fullscreen_loader()
 st.set_page_config(
-    page_title="Admin Panel | Noor AI",
+    page_title="Admin Panel | Smart Rehabilitation AI",
     layout="centered"
 )
 
