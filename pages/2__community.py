@@ -17,7 +17,7 @@ show_fullscreen_loader()
 # 🎨 PAGE CONFIG & CONSTANTS
 # =============================
 st.set_page_config(
-    page_title="Community Wall | Noor AI",
+    page_title="Community Wall | Smart Rehabilitation AI",
     layout="centered"
 )
 
