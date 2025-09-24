@@ -14,7 +14,7 @@ show_fullscreen_loader()
 # 🎨 PAGE CONFIG & CONSTANTS
 # =============================
 st.set_page_config(
-    page_title="Self-Assessment | Noor AI",
+    page_title="Self-Assessment | Smart Rehabilitation AI",
     layout="centered"
 )
 
@@ -563,7 +563,7 @@ if st.session_state.answers["language"] == "English":
         st.download_button(
             label=_("download_pdf"),
             data=st.session_state.pdf,
-            file_name="Noor_recovery_plan.pdf",
+            file_name="Smart_Rehabilitation_recovery_plan.pdf",
             mime="application/pdf",
             use_container_width=True,
             type="primary"
