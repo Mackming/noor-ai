@@ -449,12 +449,13 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 # Timeline data
 timeline = [
-    {"date": "Jan 2025", "title": "The Spark", "content": "After witnessing addiction struggles in our community, we envisioned a tech solution that could provide anonymous support."},
-    {"date": "Feb 2025", "title": "First Prototype", "content": "Built initial diagnosis tool using Streamlit and basic AI models."},
-    {"date": "Apr 2025", "title": "Community Feature", "content": "Added anonymous story sharing to create peer support network."},
-    {"date": "June 2025", "title": "Cultural Guidance", "content": "Integrated culturally sensitive support for Pakistani users."},
-    {"date": "Present", "title": "Smart Rehabilitation AI", "content": "Launched full platform with professional UI/UX to help thousands begin their recovery journey."}
+    {"date": "Jan 2023", "title": "The Spark", "content": "The idea was born—to harness AI for addressing addiction recovery through technology and compassion."},
+    {"date": "Nov 2023", "title": "AI Completion", "content": "Our core AI system was fully developed, capable of analyzing behavior patterns and providing personalized recovery insights."},
+    {"date": "Mar 2024", "title": "Testing & Refinement", "content": "Months of intensive testing and feedback cycles ensured accuracy, cultural alignment, and reliability of the platform."},
+    {"date": "May 2024", "title": "Official Partnership", "content": "Affiliated with Silver Lining Pakistan, integrating our technology across its three branches in Lahore, Sheikhupura, and Faisalabad."},
+    {"date": "Present", "title": "Expanding Impact", "content": "Our AI-powered platform now supports recovery journeys nationwide—bridging technology, empathy, and hope."}
 ]
+
 # Display timeline
 st.markdown('<div class="timeline-container">', unsafe_allow_html=True)
 st.markdown('<div class="timeline-line"></div>', unsafe_allow_html=True)
