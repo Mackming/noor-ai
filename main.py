@@ -7,13 +7,14 @@ from utils.loading_screen import show_fullscreen_loader
 # =============================
 # ✨ BRAND CONSTANTS & SETTINGS
 # =============================
-APP_NAME = "Smart Rehabilitation AI"
+APP_NAME = "Smart Rehabilitation "
 PRIMARY_COLOR = "#6C63FF"  # Purple for wisdom
 SECONDARY_COLOR = "#35D0BA"  # Teal for renewal
 LIGHT_BG = "#FFFFFF"  # Pure white background
 TAQI_IG = "https://instagram.com/taqikvzmi"
 ALI_IG = "https://www.instagram.com/alijamalashraf/"
-
+SILVER_LINING_WEBSITE = "http://www.silverlining.org.pk/"
+SILVER_LINING_LOGO = "https://raw.githubusercontent.com/Mackming/noor-ai/main/silver_lining_logo.png"
 
 # =============================
 # 🎨 CUSTOM CSS INJECTION (White Theme)
@@ -121,6 +122,157 @@ st.markdown(f"""
         min-height: 2.6em;
     }}
     
+    /* ----- PREMIUM PARTNERSHIP SECTION ----- */
+    .premium-partnership {{
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 50%, #ffffff 100%);
+        border-radius: 24px;
+        padding: 3rem 2.5rem;
+        margin: 3rem 0;
+        border: 2px solid #f0f2ff;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(108, 99, 255, 0.08);
+    }}
+    
+    .premium-partnership::before {{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, {PRIMARY_COLOR}, {SECONDARY_COLOR}, {PRIMARY_COLOR});
+        background-size: 200% 100%;
+        animation: shimmer 3s ease-in-out infinite;
+    }}
+    
+    @keyframes shimmer {{
+        0% {{ background-position: -200% 0; }}
+        100% {{ background-position: 200% 0; }}
+    }}
+    
+    .partnership-badge {{
+        display: inline-flex;
+        align-items: center;
+        background: linear-gradient(135deg, {PRIMARY_COLOR}, #8a85ff);
+        color: white;
+        padding: 0.6rem 1.8rem;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+        border: 1px solid rgba(255,255,255,0.2);
+    }}
+    
+    .partnership-badge::before {{
+        content: '⭐';
+        margin-right: 0.5rem;
+        font-size: 1rem;
+    }}
+    
+    .hospital-logo-container {{
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        border: 1px solid #f0f0f0;
+        display: inline-block;
+        margin: 1.5rem 0;
+        transition: all 0.3s ease;
+        position: relative;
+    }}
+    
+    .hospital-logo-container:hover {{
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(108, 99, 255, 0.15);
+    }}
+    
+    .hospital-logo {{
+        max-width: 200px;
+        height: auto;
+        filter: brightness(1.05) contrast(1.1);
+    }}
+    
+    .branch-grid {{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.2rem;
+        margin: 2rem 0;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }}
+    
+    .branch-card {{
+        background: linear-gradient(135deg, #ffffff, #fafbff);
+        padding: 1.5rem 1rem;
+        border-radius: 16px;
+        text-align: center;
+        border: 1px solid #e8ebff;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }}
+    
+    .branch-card::before {{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: {SECONDARY_COLOR};
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }}
+    
+    .branch-card:hover::before {{
+        opacity: 1;
+    }}
+    
+    .branch-card:hover {{
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        border-color: {PRIMARY_COLOR};
+    }}
+    
+    .branch-icon {{
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+        opacity: 0.9;
+    }}
+    
+    .branch-name {{
+        font-weight: 700;
+        color: {PRIMARY_COLOR};
+        margin-bottom: 0.3rem;
+        font-size: 1.05rem;
+    }}
+    
+    .branch-city {{
+        color: #666;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }}
+    
+    .partnership-tagline {{
+        background: linear-gradient(135deg, {PRIMARY_COLOR}, {SECONDARY_COLOR});
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        background-color: #f8f9ff;
+        display: inline-block;
+        border: 1px solid #e8ebff;
+    }}
+    
     /* ----- INVISIBLE BUTTON FIX ----- */
     .invisible-btn {{
         position: absolute !important;
@@ -154,6 +306,14 @@ st.markdown(f"""
         .feature-card {{
             padding: 1.2rem 0.8rem;
         }}
+        
+        .premium-partnership {{
+            padding: 2.5rem 2rem;
+        }}
+        
+        .branch-grid {{
+            grid-template-columns: repeat(2, 1fr);
+        }}
     }}
     
     @media (max-width: 768px) {{
@@ -173,6 +333,29 @@ st.markdown(f"""
             font-size: 1.1rem !important;
             max-width: 90% !important;
             margin: 0 auto;
+        }}
+        
+        .premium-partnership {{
+            padding: 2rem 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: 20px;
+        }}
+        
+        .hospital-logo {{
+            max-width: 160px;
+        }}
+        
+        .hospital-logo-container {{
+            padding: 1.5rem;
+        }}
+        
+        .branch-grid {{
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }}
+        
+        .branch-card {{
+            padding: 1.2rem 1rem;
         }}
         
         .stColumns > div {{
@@ -282,6 +465,80 @@ for i, col in enumerate([col1, col2, col3, col4]):
         """, unsafe_allow_html=True)
         
         container.markdown('</div>', unsafe_allow_html=True)
+
+# PREMIUM SILVER LINING PARTNERSHIP SECTION
+st.markdown("""
+<div class="premium-partnership">
+    <div style="text-align: center;">
+        <div class="partnership-badge">Official Healthcare Partner</div>
+""", unsafe_allow_html=True)
+
+# Partnership header
+st.markdown(f"""
+<h2 style="text-align: center; color: {PRIMARY_COLOR}; margin-bottom: 1rem; font-size: 2.2rem; font-weight: 800;">
+    Partnering with Excellence
+</h2>
+<p style="text-align: center; font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto 2rem; line-height: 1.6;">
+    We're proud to collaborate with <strong>Silver Lining Pakistan</strong>, combining cutting-edge AI technology 
+    with professional healthcare expertise for comprehensive addiction recovery.
+</p>
+""", unsafe_allow_html=True)
+
+# Logo with premium container
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.markdown(f"""
+    <div style="text-align: center;">
+        <a href="{SILVER_LINING_WEBSITE}" target="_blank">
+            <div class="hospital-logo-container">
+                <img src="{SILVER_LINING_LOGO}" alt="Silver Lining Pakistan" class="hospital-logo">
+            </div>
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
+
+# Branch locations with icons
+st.markdown(f"""
+<h3 style="text-align: center; color: {PRIMARY_COLOR}; margin: 2.5rem 0 1.5rem; font-size: 1.5rem; font-weight: 700;">
+    🏥 Our Partner Network
+</h3>
+""", unsafe_allow_html=True)
+
+# Branch grid
+st.markdown("""
+<div class="branch-grid">
+    <div class="branch-card">
+        <div class="branch-icon">🏛️</div>
+        <div class="branch-name">Main Branch</div>
+        <div class="branch-city">Lahore</div>
+    </div>
+    <div class="branch-card">
+        <div class="branch-icon">🏥</div>
+        <div class="branch-name">Sheikhupura</div>
+        <div class="branch-city">Medical Center</div>
+    </div>
+    <div class="branch-card">
+        <div class="branch-icon">🏥</div>
+        <div class="branch-name">Faisalabad</div>
+        <div class="branch-city">Medical Center</div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# Closing section
+st.markdown("""
+<div style="text-align: center; margin-top: 2.5rem;">
+    <div class="partnership-tagline">
+        AI Technology × Professional Healthcare = Complete Recovery
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# Close the premium partnership container
+st.markdown("""
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 # WELCOME MESSAGE
 st.markdown(f"""
